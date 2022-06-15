@@ -1,0 +1,111 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  position: relative;
+  height: 800px;
+  margin: -10px;
+  background: url("/assets/image/cover-image.jpg") top center/ cover repeat;
+  background-attachment: fixed;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 40%;
+}
+
+.logo img {
+  height: 48px;
+  width: 218px;
+}
+
+.form-group {
+  padding: 0 50px;
+}
+
+.form-login h1 {
+  padding: 15px 0;
+  width: auto;
+  color: #fff;
+  line-height: 1;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.form-input {
+  margin-bottom: 16px;
+}
+
+.icons i {
+  font-size: 20px;
+}
+
+.icons a {
+  color: #ffffff;
+}
+
+.icons:hover {
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+  cursor: pointer;
+}
+
+.icons {
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: white;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.signin-social {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signin-social span {
+  color: #fff;
+  font-weight: 100;
+  font-size: 14px;
+  margin-right: 16px;
+}
+
+.signin-suggest {
+  text-align: center;
+}
+
+.signin-suggest span {
+  color: #fff;
+  font-weight: 100;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.signin-suggest .footer {
+  margin-bottom: 10px;
+}
+
+.signin-suggest .footer a {
+  text-decoration: none;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.signin-suggest .login {
+  margin-bottom: 30px;
+}
+
+.hover-item a:hover {
+  text-decoration: underline;
+}
+
+/* @media screen and (max-width: 1180px) {
+  .main {
+    position: fixed;
+    height: 100%;
+  }
+} */

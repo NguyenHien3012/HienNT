@@ -1,0 +1,64 @@
+.group-left {
+  flex: 1;
+}
+
+.group-left .form-input {
+  margin-right: 20px;
+}
+.form-login {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  display: inline-block;
+  width: 50%;
+}
+
+.form-input input {
+  padding: 8px 0 8px 12px;
+  height: 30px;
+  width: 95%;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.form-input input:hover {
+  border: 1px solid #ff0000;
+}
+
+.form-input input:focus {
+  border: 1px solid #ff0000;
+  outline: 0;
+}
+
+.group-right {
+  flex: 1;
+}
+
+.group-right .form-input {
+  margin-left: 20px;
+}
+
+.form-group-input {
+  display: flex;
+}
+
+.btn-sign-up {
+  text-align: center;
+  margin: 25px 0;
+  line-height: 25px;
+  padding: 8px 15px;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 20px;
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  width: 95%;
+  font-weight: bold;
+}
+
+.btn-sign-up:hover {
+  background-color: #ff0000b6;
+}
