@@ -6,8 +6,13 @@ html {
   position: relative;
   height: 800px;
   margin: -10px;
-  background: url("/assets/image/cover-image.jpg") top center/ cover repeat;
+  background: url("/assets/image/cover-image.jpg") top center/ cover no-repeat;
   background-attachment: fixed;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: inherit;
 }
 
 .logo {
