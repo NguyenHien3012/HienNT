@@ -4,7 +4,7 @@ html {
 
 .main {
   position: relative;
-  height: 800px;
+  height: 900px;
   margin: -10px;
   background: url("/assets/image/cover-image.jpg") top center/ cover no-repeat;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ html {
 
 .logo {
   position: absolute;
-  top: 40px;
+  top: 10%;
   left: 40%;
 }
 
@@ -108,9 +108,60 @@ html {
   text-decoration: underline;
 }
 
-/* @media screen and (max-width: 1180px) {
+@media screen and (max-width: 912px) and (min-width: 821px) {
   .main {
-    position: fixed;
+    position: absolute;
     height: 100%;
+    width: 100%;
   }
-} */
+  .logo {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+  }
+  .title h1 {
+    font-size: 32px;
+    padding-top: 40%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .logo {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+  }
+  .signin-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 820px) and (min-width: 415px) {
+  .main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .logo {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .logo {
+    left: 15%;
+  }
+}
