@@ -23,21 +23,35 @@
         <div class="form-login">
           <div class="form-group">
             <h1>Log in</h1>
-            <div>
+            <form action="" method="post" class="form" id="form-1">
               <div class="form-input">
-                <input type="email" placeholder="Email" required />
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="form-control"
+                />
+                <span class="error-txt"></span>
               </div>
               <div class="form-input">
-                <input type="password" placeholder="Password" required />
+                <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  class="form-control"
+                />
+                <span class="error-txt"></span>
               </div>
               <div class="form-input">
-                <a href="" class="btn-login">
+                <button class="btn-login" type="form-submit">
                   <div class="btn-login-1">
                     <span>Log in</span>
                   </div>
-                </a>
+                </button>
               </div>
-            </div>
+            </form>
             <div class="forgot-password hover-item">
               <a href="">Forgot password?</a>
             </div>
@@ -68,5 +82,56 @@
         </div>
       </div>
     </div>
+    <script src="/login.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      Validator({
+        form: "#form-1",
+        errorSelector: ".error-txt",
+        rules: [
+          Validator.isRequired("#email"),
+          Validator.isRequired("#password"),
+          Validator.isEmail("#email"),
+          Validator.minLength("#password", 8),
+        ],
+        onSubmit: function (data) {
+          // axios({
+          //   method: "post",
+          //   url: "https://test.fandelo.com/api/portal/app/login",
+          //   data: {
+          // deviceId: "a9ea993ab601ccd3fd18efb47f198ea8",
+          // password: data.password,
+          // platformType: 3,
+          // platformVersion: "1.0",
+          // pnsToken: "a9ea993ab601ccd3fd18efb47f198ea8",
+          // username: data.username,
+          //   },
+          // https://test.fandelo.com/api/portal/fan/home
+          // });
+          axios
+            .post(`https://test.fandelo.com/api/portal/app/login`, {
+              username: data.email,
+              password: data.password,
+              deviceId: "a9ea993ab601ccd3fd18efb47f198ea8",
+              platformType: 3,
+              platformVersion: "1.0",
+              pnsToken: "a9ea993ab601ccd3fd18efb47f198ea8",
+            })
+            .then(
+              (res) => {
+                if (res.data.error) {
+                  alert(res.data.error.message);
+                } else {
+                  localStorage.setItem("eko-user", JSON.stringify(res.data));
+                  location.href = "/homepage.html";
+                }
+              },
+              (error) => {
+                console.log(error);
+              }
+            );
+        },
+      });
+    </script>
   </body>
 </html>

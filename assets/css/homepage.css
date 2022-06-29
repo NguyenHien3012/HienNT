@@ -1,0 +1,291 @@
+#header {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.row {
+  padding: 15px 0;
+  width: inherit;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  padding: 40px 0;
+  top: 4%;
+}
+
+#content {
+  padding-top: 10%;
+}
+
+.masonry {
+  /* Masonry container */
+  column-count: 4;
+  column-gap: 1em;
+}
+
+.item {
+  /* Masonry bricks or child elements */
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+.icons {
+  margin-top: 10px;
+  padding: 0 16px 0 32px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.icons:hover {
+  color: #e60a17;
+}
+.navbar {
+  display: block;
+}
+
+.nav-item {
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.nav-item:hover {
+  color: #e60a17;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #e60a17;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #e60a17;
+}
+
+.select-item {
+  float: right;
+}
+
+.select {
+  border: 0.5px solid #c6c6cf;
+  border-radius: 24px;
+  padding: 5px 50px 5px 10px;
+  width: 215px;
+}
+
+form {
+  background-color: #f4f4f4;
+  display: flex;
+  padding: 2px;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
+}
+
+input[type="search"] {
+  border: none;
+  background: transparent;
+  color: inherit;
+}
+
+input[type="search"]::placeholder {
+  color: #4f4f4f;
+}
+
+button[type="submit"] {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button[type="submit"]:hover {
+  opacity: 1;
+}
+
+button[type="submit"]:focus,
+input[type="search"]:focus {
+  outline: none;
+}
+
+.icons-search {
+  cursor: pointer;
+  height: 100%;
+  width: 2%;
+  padding: 6px 10px;
+  color: #4f4f4f;
+}
+
+.logo img {
+  position: absolute;
+  width: 144px;
+  height: 32px;
+}
+
+.header-top {
+  top: 20%;
+  height: 100%;
+  display: flex;
+}
+
+.dropdown img {
+  margin-left: 19px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown .btn:focus {
+  box-shadow: none;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* The Masonry Container */
+#masonry {
+  margin: 1.5em auto;
+  max-width: 100%;
+  column-gap: 1.5em;
+  overflow: hidden;
+  margin-left: -5px;
+}
+
+/* The Masonry Brick */
+.item {
+  background: #ffffff;
+  margin: 0 0 1.5em;
+  margin: 10px;
+  font-size: 30px;
+  text-align: start;
+  box-shadow: rgb(206 206 206 / 50%) 1px 2px 5px 1px;
+  border-radius: 0px 0px 3px 3px;
+  padding-bottom: 10px;
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  #masonry {
+    column-count: 4;
+  }
+  .icons {
+    padding: 0 18px 0 20px;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  #masonry {
+    column-count: 3;
+  }
+  .icons {
+    padding: 0 8px 0 20px;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  #masonry {
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #masonry {
+    column-count: 1;
+  }
+}
+
+/* h4,
+h3 {
+  text-shadow: 0 3px 3px rgba(128, 128, 128, 0.548);
+} */
+
+.item img {
+  width: inherit;
+}
+
+.item .detail-under button {
+  font-weight: 600;
+  border: 0.5px solid #282828;
+  padding: 0px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.item h3 {
+  font-size: 20px;
+}
+
+.item .address,
+.item .detail-under {
+  font-size: 13px;
+  display: flex;
+}
+
+.item .avatar {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+
+.detail-under span {
+  margin-right: 10px;
+  color: #c6c6cf;
+}
+
+.detail-over {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eaeaea80;
+}
+
+.detail-under {
+  padding: 10px 15px;
+  justify-content: space-between;
+}
+
+.item .address i {
+  color: #c6c6cf;
+  padding-right: 3px;
+}
+
+.item .detail-under i {
+  color: #c6c6cf;
+}
+
+.item .address div {
+  padding: 5px 5px 15px 0;
+}
+
+.item .address div {
+  padding: 5px 5px 15px 0;
+}
+.item .address div > span {
+  font-size: 11px;
+}
+
+.item .detail-over .link {
+  color: #000;
+  font-size: 12px;
+}

@@ -10,9 +10,10 @@
 .form-input input {
   padding: 8px 14px;
   height: 30px;
-  width: 90%;
+  width: 95%;
   border: 1px solid transparent;
   border-radius: 3px;
+  margin-bottom: 2%;
 }
 
 .form-input input:hover {
@@ -30,7 +31,6 @@
 
 .btn-login {
   text-align: center;
-  margin: 25px 0;
   line-height: 25px;
   padding: 8px 15px;
   background-color: #ff0000;
@@ -40,7 +40,8 @@
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
-  width: 90%;
+  width: 100%;
+  border: none;
   font-weight: bold;
 }
 
@@ -65,9 +66,6 @@
     width: 70%;
   }
   .form-input input {
-    width: 85%;
-  }
-  .btn-login {
     width: 85%;
   }
 }
@@ -96,10 +94,24 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .form-login {
+    left: 25%;
+    width: 50%;
+    top: 30%;
+  }
+}
+
 @media screen and (max-width: 280px) {
   .form-login {
     left: 8%;
     width: 85%;
     top: 20%;
   }
+}
+
+.invalid {
+  margin-top: 10px;
+  color: #f33a58;
+  font-size: 13Fpx;
 }
